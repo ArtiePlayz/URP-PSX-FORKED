@@ -17,7 +17,8 @@ UnityVS.Aries.sln.DotSettings
 *.userprefs
 *.pidb
 *.booproj
- 
+*.idea
+
 #Unity3D Generated File On Crash Reports
 sysinfo.txt
 
@@ -31,3 +32,6 @@ URP-PSX/.idea/.idea.URP-PSX/.idea/indexLayout.xml
 URP-PSX/.idea/.idea.URP-PSX/.idea/modules.xml
 URP-PSX/.idea/.idea.URP-PSX/.idea/vcs.xml
 URP-PSX/.idea/.idea.URP-PSX/riderModule.iml
+URP-PSX/Packages/
+URP-PSX/UserSettings/
+URP-PSX/ProjectSettings/
