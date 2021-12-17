@@ -1,4 +1,4 @@
-#URP-PSX-FORK'D
+# URP-PSX-FORK
 
 I've been using this for a short while now and really enjoying it, so I've decided to do some janitorial work on the project and add some of my own touches.
 
