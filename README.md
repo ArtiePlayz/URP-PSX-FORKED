@@ -19,7 +19,7 @@ I Also edited some existing shaders to stop giving errors for Shadergraph versio
 <img src="Media/crt1.gif" width=100%>
 
 #### Notes:
-- In never versions of URP depth textures needs to enabled on the Render Pipeline Asset for fog to work.
+- In newer versions of URP depth textures needs to enabled on the Render Pipeline Asset for fog to work.
 - New Affine texture warping shader currently doesn't have a lit variant and unlit variant does not support custom lighting.
 - Added scenes for both new shader variants and added CRT effect to all existing scenes.
 
