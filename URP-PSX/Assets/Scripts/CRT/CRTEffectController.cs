@@ -9,11 +9,7 @@ public class CRTEffectController : MonoBehaviour
     [SerializeField] protected bool isEnabled = true;
 
     protected Crt crt;
-    //[SerializeField] protected float widthPixelation = 512;
-    //[SerializeField] protected float heightPixelation = 256;
-    //[SerializeField] protected float colorPrecision = 16;
 
-    [SerializeField] protected float dummyParam = 1.0f;
     [SerializeField] protected float screenBendX = 1000.0f;
     [SerializeField] protected float screenBendY = 1000.0f;
     [SerializeField] protected float vignetteAmount = 0.0f;
@@ -41,13 +37,6 @@ public class CRTEffectController : MonoBehaviour
         if (this.crt == null) volumeProfile.TryGet<Crt>(out this.crt);
         if (this.crt == null) return;
         
-        
-        //ACCESSING PARAMS 
-        //this.pixelation.widthPixelation.value = this.widthPixelation;
-        //this.pixelation.heightPixelation.value = this.heightPixelation;
-        //this.pixelation.colorPrecision.value = this.colorPrecision;
-
-        this.crt.dummyParam.value = this.dummyParam;
         this.crt.screenBendX.value = this.screenBendX;
         this.crt.screenBendY.value = this.screenBendY;
         this.crt.vignetteAmount.value = this.vignetteAmount;

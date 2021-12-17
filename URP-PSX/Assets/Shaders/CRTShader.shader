@@ -11,14 +11,6 @@ Shader "PostEffect/CRTShader"
         sampler2D _MainTex;  
         sampler2D _CameraDepthTexture;
         
-        //for Pixelation      
-        //float _WidthPixelation;
-        //float _HeightPixelation;
-        
-        //for color precision
-        //float _ColorPrecision;
-        
-        float _DummyParam;
         float _ScreenBendX;
         float _ScreenBendY;
         float _VignetteAmount;

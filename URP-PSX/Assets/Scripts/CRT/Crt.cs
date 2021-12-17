@@ -5,14 +5,6 @@ using UnityEngine.Rendering.Universal;
 
 public class Crt : VolumeComponent, IPostProcessComponent
 {
-    //PIXELATION
-    //public FloatParameter widthPixelation = new FloatParameter(512);
-    //public FloatParameter heightPixelation = new FloatParameter(512);
-    
-    //COLOR PRECISION 
-    //public FloatParameter colorPrecision = new FloatParameter(32.0f);
-
-    public FloatParameter dummyParam = new FloatParameter(1.0f);
     public FloatParameter screenBendX = new FloatParameter(1000.0f);
     public FloatParameter screenBendY = new FloatParameter(1000.0f);
     public FloatParameter vignetteAmount = new FloatParameter(0.0f);

@@ -27,12 +27,6 @@ public class CRTPass : ScriptableRenderPass
     static readonly int MainTexId = Shader.PropertyToID("_MainTex");
     static readonly int TempTargetId = Shader.PropertyToID("_TempTargetCRT");
     
-    //PROPERTIES
-    //static readonly int WidthPixelation = Shader.PropertyToID("_WidthPixelation");
-    //static readonly int HeightPixelation = Shader.PropertyToID("_HeightPixelation");
-    //static readonly int ColorPrecison = Shader.PropertyToID("_ColorPrecision");
-
-    static readonly int DummyParam = Shader.PropertyToID("_DummyParam");
     static readonly int ScreenBendX = Shader.PropertyToID("_ScreenBendX");
     static readonly int ScreenBendY = Shader.PropertyToID("_ScreenBendY");
     static readonly int VignetteAmount = Shader.PropertyToID("_VignetteAmount");
@@ -103,11 +97,7 @@ public class CRTPass : ScriptableRenderPass
         
         //setting parameters here 
         cameraData.camera.depthTextureMode = cameraData.camera.depthTextureMode | DepthTextureMode.Depth;
-        //this.pixelationMaterial.SetFloat(WidthPixelation, this.CrtEffect.widthPixelation.value);
-        //this.pixelationMaterial.SetFloat(HeightPixelation, this.CrtEffect.heightPixelation.value);
-        //this.pixelationMaterial.SetFloat(ColorPrecison, this.CrtEffect.colorPrecision.value);
 
-        this.crtMaterial.SetFloat(DummyParam, this.m_Crt.dummyParam.value);
         this.crtMaterial.SetFloat(ScreenBendX, this.m_Crt.screenBendX.value);
         this.crtMaterial.SetFloat(ScreenBendY, this.m_Crt.screenBendY.value);
         this.crtMaterial.SetFloat(VignetteAmount, this.m_Crt.vignetteAmount.value);
