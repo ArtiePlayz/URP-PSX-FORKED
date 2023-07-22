@@ -1,8 +1,8 @@
-# URP-PSX-FORK
+# URP-PSX-FORK (URP 14)
 
 I've been using this for a short while now and really enjoying it, so I've decided to do some janitorial work on the project and add some of my own touches.
 
-First of all I upgraded the project to work on Unity 2021.1.4f1. (It was working before just printing some warnings 🙂)
+First of all I upgraded the project to work on Unity 2022.3.5f1 and URP version 14. (It was working before just printing some warnings 🙂)
 
 I Also edited some existing shaders to stop giving warnings for Shadergraph versions above 10 (custom lighting shader for example).
 
