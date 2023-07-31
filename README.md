@@ -10,7 +10,7 @@ I Also edited some existing shaders to stop giving warnings for Shadergraph vers
 
 
 ## Changes
-- Upgraded for Shadergraph version 11.
+- Upgraded for Shadergraph version 14.
 - Added new render feature for CRT Effect. (Screen bending, vignette, scan lines, noise and chromatic aberration)
 - Added a new unlit shader with affine texture warping and vertex locking, **unfortunately I couldn't get around to implementing custom lighting**. Anyway this shader comes in two variants:
     - A Regular version similar to original unlit shader in this project.
