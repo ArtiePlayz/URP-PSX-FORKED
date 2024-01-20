@@ -10,6 +10,9 @@ public class CRTEffectController : MonoBehaviour
 
     protected Crt crt;
 
+    [SerializeField] protected float scanlinesWeight = 1f;
+    [SerializeField] protected float noiseWeight = 1f;
+    
     [SerializeField] protected float screenBendX = 1000.0f;
     [SerializeField] protected float screenBendY = 1000.0f;
     [SerializeField] protected float vignetteAmount = 0.0f;
@@ -36,6 +39,9 @@ public class CRTEffectController : MonoBehaviour
         if (this.volumeProfile == null) return;
         if (this.crt == null) volumeProfile.TryGet<Crt>(out this.crt);
         if (this.crt == null) return;
+
+        this.crt.scanlinesWeight.value = this.scanlinesWeight;
+        this.crt.noiseWeight.value = this.noiseWeight;
         
         this.crt.screenBendX.value = this.screenBendX;
         this.crt.screenBendY.value = this.screenBendY;

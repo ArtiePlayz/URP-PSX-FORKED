@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Crt
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
-  dummyParam:
+  scanlinesWeight:
+    m_OverrideState: 1
+    m_Value: 1
+  noiseWeight:
     m_OverrideState: 1
     m_Value: 1
   screenBendX:
@@ -46,10 +48,10 @@ MonoBehaviour:
     m_Value: 250
   chromaticRed:
     m_OverrideState: 1
-    m_Value: {x: 0.001, y: -0.001}
+    m_Value: {x: 0.002, y: -0.002}
   chromaticGreen:
     m_OverrideState: 1
-    m_Value: {x: -0.001, y: 0.001}
+    m_Value: {x: -0.002, y: 0.002}
   chromaticBlue:
     m_OverrideState: 1
     m_Value: {x: 0, y: 0}
@@ -66,7 +68,6 @@ MonoBehaviour:
   m_Name: Pixelation
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
   widthPixelation:
     m_OverrideState: 1
     m_Value: 512
@@ -75,7 +76,7 @@ MonoBehaviour:
     m_Value: 256
   colorPrecision:
     m_OverrideState: 1
-    m_Value: 4.6
+    m_Value: 16
 --- !u!114 &-758010384845797820
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -89,10 +90,9 @@ MonoBehaviour:
   m_Name: Dithering
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
   patternIndex:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   ditherThreshold:
     m_OverrideState: 1
     m_Value: 3.53
@@ -132,7 +132,6 @@ MonoBehaviour:
   m_Name: Fog
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
   fogDensity:
     m_OverrideState: 1
     m_Value: 10
@@ -142,15 +141,9 @@ MonoBehaviour:
   fogColor:
     m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 0}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
   ambientColor:
     m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 0}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
   fogNear:
     m_OverrideState: 0
     m_Value: 0

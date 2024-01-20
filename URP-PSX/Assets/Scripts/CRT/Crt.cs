@@ -5,6 +5,10 @@ using UnityEngine.Rendering.Universal;
 
 public class Crt : VolumeComponent, IPostProcessComponent
 {
+    
+    public FloatParameter scanlinesWeight = new FloatParameter(1f);
+    public FloatParameter noiseWeight = new FloatParameter(1f);
+    
     public FloatParameter screenBendX = new FloatParameter(1000.0f);
     public FloatParameter screenBendY = new FloatParameter(1000.0f);
     public FloatParameter vignetteAmount = new FloatParameter(0.0f);

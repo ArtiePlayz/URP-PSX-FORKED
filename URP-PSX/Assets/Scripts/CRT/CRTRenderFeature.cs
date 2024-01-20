@@ -33,6 +33,9 @@ namespace PSX
         static readonly int MainTexId = Shader.PropertyToID("_MainTex");
         static readonly int TempTargetId = Shader.PropertyToID("_TempTargetCRT");
 
+        static readonly int ScanLinesWeight = Shader.PropertyToID("_ScanlinesWeight");
+        static readonly int NoiseWeight = Shader.PropertyToID("_NoiseWeight");
+        
         static readonly int ScreenBendX = Shader.PropertyToID("_ScreenBendX");
         static readonly int ScreenBendY = Shader.PropertyToID("_ScreenBendY");
         static readonly int VignetteAmount = Shader.PropertyToID("_VignetteAmount");
@@ -112,6 +115,9 @@ namespace PSX
             //setting parameters here 
             cameraData.camera.depthTextureMode = cameraData.camera.depthTextureMode | DepthTextureMode.Depth;
 
+            this.crtMaterial.SetFloat(ScanLinesWeight, this.m_Crt.scanlinesWeight.value);
+            this.crtMaterial.SetFloat(NoiseWeight, this.m_Crt.noiseWeight.value);
+            
             this.crtMaterial.SetFloat(ScreenBendX, this.m_Crt.screenBendX.value);
             this.crtMaterial.SetFloat(ScreenBendY, this.m_Crt.screenBendY.value);
             this.crtMaterial.SetFloat(VignetteAmount, this.m_Crt.vignetteAmount.value);

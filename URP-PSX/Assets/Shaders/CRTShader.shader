@@ -10,6 +10,9 @@ Shader "PostEffect/CRTShader"
     
         sampler2D _MainTex;  
         sampler2D _CameraDepthTexture;
+
+        float _ScanlinesWeight;
+        float _NoiseWeight;
         
         float _ScreenBendX;
         float _ScreenBendY;
@@ -120,11 +123,11 @@ Shader "PostEffect/CRTShader"
            
            
            //Scan lines
-           float scanlines = (scanLines(uv, _ScanLinesDensity, _ScanLinesSpeed));
+           float scanlines = _ScanlinesWeight * (scanLines(uv, _ScanLinesDensity, _ScanLinesSpeed));
            //float disruptiveLines = (scanLines(uv, 0.005, -5));
            
            //Noise
-           float valNoise = (noise(uv * _NoiseAmount)); //noise size
+           float valNoise = _NoiseWeight * (noise(uv * _NoiseAmount)); //noise size
            
            //Modify for chromatic abberation
            half2 redShift = _ChromaticRed;
