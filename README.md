@@ -8,6 +8,7 @@ First of all I upgraded the project to work on Unity 2022.3.17f1 and URP version
 
 I Also edited some existing shaders to stop giving warnings for Shadergraph versions above 10 (custom lighting shader for example).
 
+### Check the [releases page](https://github.com/Math-Man/URP-PSX-FORKED/releases/tag/package) for the bundled .unitypackage file and setup instructions.
 
 ## Changes
 - Upgraded for Shadergraph version 14.
@@ -15,7 +16,8 @@ I Also edited some existing shaders to stop giving warnings for Shadergraph vers
 - Added a new unlit shader with affine texture warping and vertex locking, **unfortunately I couldn't get around to implementing custom lighting**. Anyway this shader comes in two variants:
     - A Regular version similar to original unlit shader in this project.
     - PolyBrush version which supports PolyBrush texture painting.
-- Added a couple useful subgraphs, a random color picker and voronoi center graph. 
+- Added a couple useful subgraphs, a random color picker and voronoi center graph.
+- Added a variation of the PBR shader that is transparent. (Only in URP 14 branch)
 
 
 <img src="Media/poly1.gif" width=100%>
