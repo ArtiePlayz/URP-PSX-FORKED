@@ -50,6 +50,15 @@ namespace PSX
         static readonly int ChromaticRed = Shader.PropertyToID("_ChromaticRed");
         static readonly int ChromaticGreen = Shader.PropertyToID("_ChromaticGreen");
         static readonly int ChromaticBlue = Shader.PropertyToID("_ChromaticBlue");
+        
+        static readonly int GrilleOpacity = Shader.PropertyToID("_GrilleOpacity");
+        static readonly int GrilleCounterOpacity = Shader.PropertyToID("_GrilleCounterOpacity");
+        static readonly int GrilleResolution = Shader.PropertyToID("_GrilleResolution");
+        static readonly int GrilleCounterResolution = Shader.PropertyToID("_GrilleCounterResolution");
+        static readonly int GrilleBrightness = Shader.PropertyToID("_GrilleBrightness");
+        static readonly int GrilleUvRotation = Shader.PropertyToID("_GrilleUvRotation");
+        static readonly int GrilleUvMidPoint = Shader.PropertyToID("_GrilleUvMidPoint");
+        static readonly int GrilleShift = Shader.PropertyToID("_GrilleShift");
 
         Crt m_Crt;
         Material crtMaterial;
@@ -61,7 +70,7 @@ namespace PSX
             var shader = Shader.Find(shaderPath);
             if (shader == null)
             {
-                Debug.LogError("Shader not found lol (crt).");
+                Debug.LogError("Shader not found (crt).");
                 return;
             }
 
@@ -133,6 +142,15 @@ namespace PSX
             this.crtMaterial.SetVector(ChromaticGreen, this.m_Crt.chromaticGreen.value);
             this.crtMaterial.SetVector(ChromaticBlue, this.m_Crt.chromaticBlue.value);
 
+            this.crtMaterial.SetFloat(GrilleOpacity, this.m_Crt.grilleOpacity.value);
+            this.crtMaterial.SetFloat(GrilleCounterOpacity, this.m_Crt.grilleCounterOpacity.value);
+            this.crtMaterial.SetFloat(GrilleResolution, this.m_Crt.grilleResolution.value);
+            this.crtMaterial.SetFloat(GrilleCounterResolution, this.m_Crt.grilleCounterResolution.value);
+            this.crtMaterial.SetFloat(GrilleBrightness, this.m_Crt.grilleBrightness.value);
+            this.crtMaterial.SetFloat(GrilleUvRotation, this.m_Crt.grilleUvRotation.value);
+            this.crtMaterial.SetFloat(GrilleUvMidPoint, this.m_Crt.grilleUvMidPoint.value);
+            this.crtMaterial.SetVector(GrilleShift, this.m_Crt.grilleShift.value);
+            
             int shaderPass = 0;
             cmd.SetGlobalTexture(MainTexId, source);
             cmd.GetTemporaryRT(destination, w, h, 0, FilterMode.Point, RenderTextureFormat.Default);

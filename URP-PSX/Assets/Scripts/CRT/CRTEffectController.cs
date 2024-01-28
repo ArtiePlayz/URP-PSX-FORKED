@@ -28,6 +28,15 @@ public class CRTEffectController : MonoBehaviour
     [SerializeField] protected Vector2 chromaticGreen = new Vector2();
     [SerializeField] protected Vector2 chromaticBlue = new Vector2();
     
+    [SerializeField] protected float grilleOpacity = 0.4f;
+    [SerializeField] protected float grilleCounterOpacity = 0.2f;
+    [SerializeField] protected float grilleResolution = 360.0f;
+    [SerializeField] protected float grilleCounterResolution = 540.0f;
+    [SerializeField] protected float grilleBrightness = 15.0f;
+    [SerializeField] protected float grilleUvRotation = (90.0f);
+    [SerializeField] protected float grilleUvMidPoint = 0.5f;
+    [SerializeField] protected Vector3 grilleShift = new Vector3(1.0f, 1.0f, 1.0f);
+    
     protected void Update()
     {
         this.SetParams();
@@ -57,6 +66,15 @@ public class CRTEffectController : MonoBehaviour
         this.crt.chromaticRed.value = this.chromaticRed;
         this.crt.chromaticGreen.value = this.chromaticGreen;
         this.crt.chromaticBlue.value = this.chromaticBlue;
-
+        
+        this.crt.grilleOpacity.value = this.grilleOpacity;
+        this.crt.grilleCounterOpacity.value = this.grilleCounterOpacity;
+        this.crt.grilleResolution.value = this.grilleResolution;
+        this.crt.grilleCounterResolution.value = this.grilleCounterResolution;
+        this.crt.grilleBrightness.value = this.grilleBrightness;
+        this.crt.grilleUvRotation.value = this.grilleUvRotation;
+        this.crt.grilleUvMidPoint.value = this.grilleUvMidPoint;
+        this.crt.grilleShift.value = this.grilleShift;
+        
     }
 }
